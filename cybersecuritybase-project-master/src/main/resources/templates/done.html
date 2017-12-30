@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Thank you!</title>
+    </head>
+    <body>
+
+        <h1>Thank you! You have been signed up to the event!</h1>
+
+        <header th:fragment="header">
+            <ul>
+                <li><a th:href="@{/done}">Leave us feedback in the section below</a></li>                  
+            </ul>
+        </header>
+        
+        <form th:action="@{/form}" th:method="POST">
+            <p>Feedback: <input type="text" name="name"/></p>
+            <input type="submit" value="Give feedback"></input>
+        </form>
+    </body>
+</html>
